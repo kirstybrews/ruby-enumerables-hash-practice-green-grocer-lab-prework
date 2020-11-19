@@ -20,7 +20,6 @@ def apply_coupons(cart, coupons)
     cart_item = cart[item[:item]]
     couponed_item = "#{item[:item]} W/COUPON"
     cart_item_with_coupon = cart[couponed_item]
-    #binding.pry
     if cart_item && cart_item[:count] >= item[:num]
       if cart_item_with_coupon
         cart_item_with_coupon[:count] += item[:num]
